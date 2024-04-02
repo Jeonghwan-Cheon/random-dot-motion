@@ -1,0 +1,140 @@
+h1 {
+    text-align: left;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: black;
+    color: white;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 40px);
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#canvas {
+    border: 1px solid black;
+    background-color: black;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.motion_canvas {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-content: center;
+    max-height: 50%;
+}
+
+.controls {
+    text-align: right;
+    margin-bottom: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.customButtonOption {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+p {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 2px;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .controls {
+        text-align: center;
+    }
+    .container {
+        justify-content: flex-start;
+    }
+    body {
+        font-size: 13px;
+    }
+    p {
+        text-align: center;
+    }
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: white;
+    outline: none;
+    opacity: 1;
+    transition: opacity .2s;
+    margin: 8px 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: -6.5px;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type=range]::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+input[type=range]:hover {
+    opacity: 1;
+}

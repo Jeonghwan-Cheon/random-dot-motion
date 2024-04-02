@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Random dot motion </title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+            <p> Random dot motion </p>
+            <p> Britten et al., 1992 </p>
+
+            <canvas id="canvas" width="400" height="400" class="motion_canvas"></canvas>
+            
+            <div class="controls">
+                <label for="numDots">Number of dots | </label>
+                <input type="range" id="numDots" min="0" max="500" value="250">
+                <span id="numDotsValue">250</span>
+            </div>
+
+            <div class="controls">
+                <label for="speed">Speed of dots&nbsp; | </label>
+                <input type="range" id="speed" min="0" max="100" value="50">
+                <span id="speedValue">050</span>
+            </div>
+
+            <div class="controls">
+                <label for="coherence">Coherence (%)&nbsp; | </label>
+                <input type="range" id="coherence" min="0" max="100" value="50">
+                <span id="coherenceValue">050</span>
+            </div>
+
+            <div class="controls">
+                <label>Direction | </label>
+                <span class="customButtonOption" id="directionUp">up</span>
+                <span class="customButtonOption" id="directionDown">down</span>
+                <span class="customButtonOption" id="directionTest">test</span>
+                <span class="customButtonOption" id="directionShow">answer</span>
+            </div>
+
+            <script src="dot_motion.js"></script>
+    </div>
+</body>
